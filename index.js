@@ -115,11 +115,8 @@ btn.addEventListener('click', (e) => {
 
     if (validFName && validLName && dept != '') {
 
-
-
-
-        let str = `${Fname.value}.${Lname.value}.${dept}@krishnacollege.ac.in`.toLowerCase();
-        mail.innerHTML = `<h2> <span class="badge badge-pill badge-secondary"> Your newly Generated Email is </span>   =>  ${str} </h2>`;
+        let str = `${Fname.value}.${Lname.value}.${dept}`.toLowerCase();
+        mail.innerHTML = `<h2 > <span class="badge badge-pill badge-secondary"> Your newly Generated Email is </span>   =>  ${str}   @krishnacollege.ac.in  </h2>`;
         // console.log(str);
         // let elem = document.createElement('h2');
         // elem.classList('bg-secondary');
@@ -128,7 +125,7 @@ btn.addEventListener('click', (e) => {
         // display.append(elem);
 
         let pwd = GeneratePassword(10);
-        pass.innerHTML = `<h2> <span class="badge badge-pill badge-secondary"> Your newly Generated Password is </span>  =>  ${pwd}</h2> `;
+        pass.innerHTML = `<h2 > <span class="badge badge-pill badge-secondary"> Your newly Generated Password is </span>  =>  ${pwd}</h2> `;
     } else if (!validLName || !validFName) {
 
     }
